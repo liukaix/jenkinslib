@@ -8,9 +8,11 @@ String buildShell = "${env.buildShell}"
 pipeline{
     agent { node {label "master"}}
     stages{
-        steps{
-            script{
-                build.Build(buildType,buildShell)
+        stage("build"){
+            steps{
+                script{
+                    build.Build(buildType,buildShell)
+                }
             }
         }
     }
