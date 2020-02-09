@@ -8,7 +8,7 @@ String buildType = "${env.buildType}"
 String buildShell = "${env.buildShell}"
 String deployHosts = "${env.deployHosts}"
 pipeline{
-    agent { node {label "master"}}
+    agent { node {label "Slave-132"}}
     stages{
         stage("build"){
             steps{
