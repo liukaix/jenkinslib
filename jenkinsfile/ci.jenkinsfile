@@ -14,7 +14,7 @@ pipeline{
             steps{
                 script{
                     build.Build(buildType,buildShell)
-                    deploy.AnsibleDeploy(sudo "${deployHosts}","-m ping ")
+                    deploy.AnsibleDeploy("${deployHosts}","-m ping ")
                 }
             }
         }

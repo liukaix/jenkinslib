@@ -2,5 +2,5 @@ package org.devops
 
 //ansible
 def AnsibleDeploy(hosts,func){
-    sh "ansible ${func} ${hosts}"
+    sh "sudo ansible ${func} ${hosts}"
 }
